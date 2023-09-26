@@ -3,7 +3,6 @@ using System.IO;
 
 class Stack
 {
-    //테스트 TEST
     int[] array = new int[1001];
     int size = 0;
 
