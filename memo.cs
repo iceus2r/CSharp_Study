@@ -79,4 +79,3 @@ StreamWriter sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput
 
 【】
 
-테스트
