@@ -1,0 +1,7 @@
+D:\Workspace\CSharp_Study\CSharp_Study\bin\Debug\CSharp_Study.exe.config
+D:\Workspace\CSharp_Study\CSharp_Study\bin\Debug\CSharp_Study.exe
+D:\Workspace\CSharp_Study\CSharp_Study\bin\Debug\CSharp_Study.pdb
+D:\Workspace\CSharp_Study\CSharp_Study\obj\Debug\CSharp_Study.csproj.AssemblyReference.cache
+D:\Workspace\CSharp_Study\CSharp_Study\obj\Debug\CSharp_Study.csproj.CoreCompileInputs.cache
+D:\Workspace\CSharp_Study\CSharp_Study\obj\Debug\CSharp_Study.exe
+D:\Workspace\CSharp_Study\CSharp_Study\obj\Debug\CSharp_Study.pdb
