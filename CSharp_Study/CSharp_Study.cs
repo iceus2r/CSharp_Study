@@ -1,35 +1,47 @@
 ﻿using System;
 using System.IO;
 
-class Stack
+class Queue
 {
-    int[] array = new int[1001];
-    int size = 0;
+    int[] array;
+    int indFront;
+    int indBack;
+
+    public Queue (int N)
+    {
+        array = new int[N];
+        indFront = 0;
+        indBack = 0;
+    }
 
     public void Push(int e)
     {
-        size++;
-        array[size] = e;
+        array[indBack] = e;
+        indBack++;
     }
     public int Pop()
     {
-        int e = array[size];
-        array[size] = default;
-        size--;
+        int e = array[indFront];
+        array[indFront] = default;
+        indFront++;
         return e;
     }
     public int Count()
     {
-        return size;
+        return indBack - indFront;
     }
     public bool isEmpty()
     {
-        if (size == 0) return true;
+        if (indFront == indBack) return true;
         else return false;
     }
-    public int Peek()
+    public int Front()
     {
-        return array[size];
+        return array[indFront];
+    }
+    public int Back()
+    {
+        return array[indBack - 1];
     }
 }
 
@@ -40,45 +52,34 @@ class Program
         StreamReader sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
         StreamWriter sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
 
-        while (true)
+        string[] input = sr.ReadLine().Split();
+        int N = int.Parse(input[0]);
+        int K = int.Parse(input[1]);
+        int cntReturn = 1;
+
+        Queue queue = new Queue(N + N * K);
+        for (int i = 1; i <= N; i++)
         {
-            string input = sr.ReadLine();
-            if (input == ".") break;
-
-            Stack stack = new Stack();
-
-            for (int j = 0; j < input.Length; j++)
-            {
-                if (input[j] == '(' || input[j] == '[') stack.Push(input[j]);
-                else if (input[j] == ')')
-                {
-                    if (stack.Peek() == '(')
-                    {
-                        stack.Pop();
-                    }
-                    else
-                    {
-                        stack.Push(input[j]);
-                        break;
-                    }
-                }
-                else if (input[j] == ']')
-                {
-                    if (stack.Peek() == '[')
-                    {
-                        stack.Pop();
-                    }
-                    else
-                    {
-                        stack.Push(input[j]);
-                        break;
-                    }
-                }
-            }
-
-            if (stack.isEmpty()) sw.WriteLine("yes");
-            else sw.WriteLine("no");
+            queue.Push(i);
         }
+
+        sw.Write("<");
+        while (queue.Count() > 1)
+        {
+            if (cntReturn != K)
+            {
+                queue.Push(queue.Pop());
+                cntReturn++;
+            }
+            else
+            {
+                sw.Write(queue.Pop());
+                sw.Write(", ");
+                cntReturn = 1;
+            }
+        }
+        sw.Write(queue.Pop());
+        sw.WriteLine(">");
         sw.Close();
     }
 }
