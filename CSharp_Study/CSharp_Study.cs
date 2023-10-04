@@ -1,47 +1,59 @@
 ﻿using System;
 using System.IO;
 
-class Queue
+class Deque
 {
     int[] array;
     int indFront;
-    int indBack;
+    int indRear;
 
-    public Queue (int N)
+    public Deque (int N)
     {
-        array = new int[N];
-        indFront = 0;
-        indBack = 0;
+        array = new int[N * 2 + 1];
+        indFront = N;
+        indRear = N;
     }
 
-    public void Push(int e)
+    public void InsertFront(int e)
     {
-        array[indBack] = e;
-        indBack++;
+        indFront--;
+        array[indFront] = e;
     }
-    public int Pop()
+    public void InsertRear(int e)
+    {
+        array[indRear] = e;
+        indRear++;
+    }
+    public int DeleteFront()
     {
         int e = array[indFront];
         array[indFront] = default;
         indFront++;
         return e;
     }
+    public int DeleteRear()
+    {
+        indRear--;
+        int e = array[indRear];
+        array[indRear] = default;
+        return e;
+    }
     public int Count()
     {
-        return indBack - indFront;
+        return indRear - indFront;
     }
     public bool isEmpty()
     {
-        if (indFront == indBack) return true;
+        if (indFront == indRear) return true;
         else return false;
     }
-    public int Front()
+    public int GetFront()
     {
         return array[indFront];
     }
-    public int Back()
+    public int GetRear()
     {
-        return array[indBack - 1];
+        return array[indRear - 1];
     }
 }
 
@@ -52,34 +64,35 @@ class Program
         StreamReader sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
         StreamWriter sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
 
-        string[] input = sr.ReadLine().Split();
-        int N = int.Parse(input[0]);
-        int K = int.Parse(input[1]);
-        int cntReturn = 1;
+        int N = int.Parse(sr.ReadLine());
+        int[] number = Array.ConvertAll(sr.ReadLine().Split(), int.Parse);
 
-        Queue queue = new Queue(N + N * K);
-        for (int i = 1; i <= N; i++)
+        Deque deque = new Deque(N * N);
+
+        for (int i = 0; i < N; i++)
         {
-            queue.Push(i);
+            deque.InsertRear(number[i]);
         }
 
-        sw.Write("<");
-        while (queue.Count() > 1)
+        int a = deque.DeleteFront();
+        sw.Write(1);
+        while (!deque.isEmpty())
         {
-            if (cntReturn != K)
+            sw.Write(" ");
+
+            if (a > 0)
             {
-                queue.Push(queue.Pop());
-                cntReturn++;
+                for (int i = 1; i < a; i++) deque.InsertRear(deque.DeleteFront());
+                a = deque.DeleteFront();
+                sw.Write(a);
             }
             else
             {
-                sw.Write(queue.Pop());
-                sw.Write(", ");
-                cntReturn = 1;
+                for (int i = -a; i > 1; i--) deque.InsertFront(deque.DeleteRear());
+                a = deque.DeleteRear();
+                sw.Write(a);
             }
         }
-        sw.Write(queue.Pop());
-        sw.WriteLine(">");
         sw.Close();
     }
 }
