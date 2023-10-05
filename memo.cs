@@ -75,7 +75,5 @@ Estate Grand LE for sforzando
 
 8u371
 
-StreamWriter sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-
 【】
 
