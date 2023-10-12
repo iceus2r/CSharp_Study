@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 StreamReader sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
@@ -30,8 +30,12 @@ void DFS(int digit)
 
     for (int i = 0; i < N; i++)
     {
-        if (digit > 0 && order[digit - 1] > i + 1) continue;
-        order[digit] = i + 1;
-        DFS(digit + 1);
+        if (!check[i])
+        {
+            check[i] = true;
+            order[digit] = i + 1;
+            DFS(digit + 1);
+            check[i] = false;
+        }
     }
 }
