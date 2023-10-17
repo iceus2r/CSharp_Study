@@ -26,7 +26,10 @@ Sprite 크기 3x0.75
 Addressable에 폰트 추가
 SceneLoader CanvasGroup Alpha값 조절로 변경
 
-대화창 위에 현재 말하고있는 캐릭터 이름 띄우기
+-대화창 위에 현재 말하고있는 캐릭터 이름 띄우기
+dialogscript에서 숫자로 받고
+json에서 숫자에 맞는 캐릭터 이름 찾아서
+캐릭터 이름 string으로 넘겨주기
 
 -일반노트 오브젝트 재활용
 Initialize시 모든 노트의 NoteDropper 기준 스폰 위치를 기록
@@ -67,7 +70,7 @@ Estate Grand LE for sforzando
 컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷
 23
 
-50
+여백 가로53 세로40
 
 
 노트 한개당 6길이
