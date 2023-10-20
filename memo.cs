@@ -26,6 +26,16 @@ Sprite 크기 3x0.75
 Addressable에 폰트 추가
 SceneLoader CanvasGroup Alpha값 조절로 변경
 
+-dialog 인스펙터에서 입력할 수 있게 하기
+dialogCode를 enum으로 정의
+dialogCode 선택 시 해당 dialog line들 나열
+line은 [대사/캐릭터/출력위치/콜백함수/스킵가능여부] 로 구성
+Line class 만들기 -> List<Line>으로 모으기 -> editor에 띄우기
+Line을 담는 List<Line>을 담는 List<List<Line>> 만들기;;
+DialogData_Line
+DialogData_Dialog
+DIalogData
+
 -대화창 위에 현재 말하고있는 캐릭터 이름 띄우기
 dialogscript에서 숫자로 받고
 json에서 숫자에 맞는 캐릭터 이름 찾아서
