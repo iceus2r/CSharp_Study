@@ -27,14 +27,9 @@ Addressable에 폰트 추가
 SceneLoader CanvasGroup Alpha값 조절로 변경
 
 -dialog 인스펙터에서 입력할 수 있게 하기
-Dialog별로 나눠서 생성하기
-line은 [대사/캐릭터/출력위치/콜백함수/스킵가능여부] 로 구성
-Line class 만들기 -> List<Line>으로 모으기 -> editor에 띄우기
-isSkippable 배경 없애고 한 Line 뭉치기
-//
 DialogManager에 콜백 내용들 추가
-string으로 eventCode 저장
-ReadLine에서 eventCode 읽어서 콜백 실행
+ReadLine에서 Line마다 Number로 콜백 유무 확인
+해당 Line에 콜백 있으면 실행, 없으면 null
 
 -대화창 위에 현재 말하고있는 캐릭터 이름 띄우기
 dialogscript에서 숫자로 받고
@@ -82,17 +77,7 @@ Estate Grand LE for sforzando
 
 여백 가로53 세로40
 
-
 노트 한개당 6길이
-
-
-line      290 69
-character 130 69
-appearpos 130 69
-skip       50 69
-callback  660  ?
-scrollbar  22
-최소창크기 682 100
 
 8u371
 
