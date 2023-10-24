@@ -26,7 +26,11 @@ Sprite 크기 3x0.75
 Addressable에 폰트 추가
 SceneLoader CanvasGroup Alpha값 조절로 변경
 
--dialog 인스펙터에서 입력할 수 있게 하기
+-DialogData Editor 만들기
+DialogData와 Dialog를 구분하기
+Line 읽어서 출력하기
+Dialog_Command print 구현
+//
 DialogManager에 콜백 내용들 추가
 ReadLine에서 Line마다 Number로 콜백 유무 확인
 해당 Line에 콜백 있으면 실행, 없으면 null
