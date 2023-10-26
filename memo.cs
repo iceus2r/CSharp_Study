@@ -21,29 +21,19 @@ Sprite 크기 3x0.75
 
 0.25
 
+Dialog 56px 한줄에 23자(한글) 가능
+여백 가로53 세로40
+
 /*Client
 인터넷 연결 확인
 Addressable에 폰트 추가
 SceneLoader CanvasGroup Alpha값 조절로 변경
-
--DialogData Editor 만들기
-DialogData와 Dialog를 구분하기
-Line 읽어서 출력하기
-Dialog_Command print 구현
-//
-DialogManager에 콜백 내용들 추가
-ReadLine에서 Line마다 Number로 콜백 유무 확인
-해당 Line에 콜백 있으면 실행, 없으면 null
-
--대화창 위에 현재 말하고있는 캐릭터 이름 띄우기
-dialogscript에서 숫자로 받고
-json에서 숫자에 맞는 캐릭터 이름 찾아서
-캐릭터 이름 string으로 넘겨주기
+Dialog PlaySFX_Action 구현
 
 -일반노트 오브젝트 재활용
 Initialize시 모든 노트의 NoteDropper 기준 스폰 위치를 기록
 한번에 출력 가능한 최대 갯수를 정해서
-노트 낙하 중에도 오브젝트의 위치를 변경하여
+노트 낙하 완료 후에도 오브젝트의 위치를 변경하여
 노트 오브젝트의 재사용이 가능하도록 개선
 */
 
@@ -74,12 +64,6 @@ Remove Matte (PSD)
 스네어드럼
 Estate Grand LE for sforzando
 */
-
-56
-컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷컷
-23
-
-여백 가로53 세로40
 
 노트 한개당 6길이
 
