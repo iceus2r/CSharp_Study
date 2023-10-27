@@ -28,7 +28,7 @@ Dialog 56px 한줄에 23자(한글) 가능
 인터넷 연결 확인
 Addressable에 폰트 추가
 SceneLoader CanvasGroup Alpha값 조절로 변경
-Dialog PlaySFX_Action 구현
+Dialog 스킵할때 말소리 한번에 나오는 것 수정
 
 -일반노트 오브젝트 재활용
 Initialize시 모든 노트의 NoteDropper 기준 스폰 위치를 기록
@@ -70,4 +70,3 @@ Estate Grand LE for sforzando
 8u371
 
 【】
-
