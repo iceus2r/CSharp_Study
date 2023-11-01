@@ -26,9 +26,11 @@ Dialog 56px 한줄에 23자(한글) 가능
 
 /*Client
 인터넷 연결 확인
-Addressable에 폰트 추가
 SceneLoader CanvasGroup Alpha값 조절로 변경
 Dialog 스킵할때 말소리 한번에 나오는 것 수정
+
+-Addressable에 폰트 추가
+TMP_Settings.cs 설정파일 불러오기
 
 -일반노트 오브젝트 재활용
 Initialize시 모든 노트의 NoteDropper 기준 스폰 위치를 기록
@@ -78,3 +80,6 @@ LithosPro 사용글자
 상용한글 44032-55203(11172자)
 한글자모 12593-12643(51자)
 특수문자 8200-9900  (1701자)
+
+
+TMP_Settings.s_Instance = Addressables.LoadAssetAsync<TMP_Settings>("TMP Settings").WaitForCompletion();
