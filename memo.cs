@@ -25,12 +25,8 @@ Dialog 56px 한줄에 23자(한글) 가능
 여백 가로53 세로40
 
 /*Client
-인터넷 연결 확인
-SceneLoader CanvasGroup Alpha값 조절로 변경
 Dialog 스킵할때 말소리 한번에 나오는 것 수정
-
--Addressable에 폰트 추가
-UITitle TMP_FontAsset 불러오는거까지 완료
+로딩창 페이드아웃때 비정상적인것 개선
 
 -일반노트 오브젝트 재활용
 Initialize시 모든 노트의 NoteDropper 기준 스폰 위치를 기록
@@ -76,28 +72,11 @@ Estate Grand LE for sforzando
 LithosPro 사용글자
 0123456789.+-JUDGEMS
 
-NanumSquareNeo 사용글자
-0123456789KMGB().?!필수데이터다운로드가필요합니다약지금다운로드하시겠습니까취소를누르면게임이종료됩니다중완료 
+NanumSquareNeo-Init 사용글자
+0123456789KMGBFPS().?!%필수데이터다운로드가필요합니다약지금다운로드하시겠습니까취소를누르면게임이종료됩니다중완료 
 
 영어     32-126     (95자)
 상용한글 44032-55203(11172자)
 한글자모 12593-12643(51자)
 특수문자 8200-9900  (1701자)
 
-
-tempFont = Addressables.LoadAssetAsync<TMP_FontAsset>(TMP_Settings.defaultFontAssetPath + new string(m_htmlTag, m_xmlAttribute[0].valueStartIndex, m_xmlAttribute[0].valueLength)).WaitForCompletion();
-
-
-	var fontHandle = Addressables.LoadResourceLocationsAsync("Font", typeof(ScriptableObject));
-        fontHandle.Completed += fontLocations =>
-        {
-            foreach (IResourceLocation location in fontLocations.Result)
-            {
-                string locationPrimaryKey = location.PrimaryKey;
-                Addressables.LoadAssetAsync<TMP_FontAsset>(locationPrimaryKey).Completed +=
-                    font =>
-                    {
-                        MaterialReferenceManager.AddFontAsset(font.Result);
-                    };
-            }
-        };
