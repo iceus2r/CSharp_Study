@@ -26,7 +26,6 @@ Dialog 56px 한줄에 23자(한글) 가능
 
 /*Client
 Dialog 스킵할때 말소리 한번에 나오는 것 수정
-로딩창 페이드아웃때 비정상적인것 개선
 
 -일반노트 오브젝트 재활용
 Initialize시 모든 노트의 NoteDropper 기준 스폰 위치를 기록
