@@ -25,6 +25,9 @@ Dialog 56px 한줄에 23자(한글) 가능
 여백 가로53 세로40
 
 /*Client
+코드 리팩토링
+
+FPS On/Off 기능 추가
 Dialog 스킵할때 말소리 한번에 나오는 것 수정
 
 -일반노트 오브젝트 재활용
@@ -64,18 +67,17 @@ Estate Grand LE for sforzando
 
 노트 한개당 6길이
 
-8u371
-
 【】
 
-LithosPro 사용글자
-0123456789.+-JUDGEMS
+Static Manager
+Manager
+Script
+Prefab
+Object
+Value(카테고리)
+Value
 
-NanumSquareNeo-Init 사용글자
-0123456789KMGBFPS().?!%필수데이터다운로드가필요합니다약지금다운로드하시겠습니까취소를누르면게임이종료됩니다중완료 
 
-영어     32-126     (95자)
-상용한글 44032-55203(11172자)
-한글자모 12593-12643(51자)
-특수문자 8200-9900  (1701자)
-
+Data 끝
+Manager 끝
+Prefab 끝
