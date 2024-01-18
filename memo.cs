@@ -25,9 +25,8 @@ Dialog 56px 한줄에 23자(한글) 가능
 여백 가로53 세로40
 
 /*Client
-코드 리팩토링
-
 FPS On/Off 기능 추가
+FMOD SFX 내장시키기
 Dialog 스킵할때 말소리 한번에 나오는 것 수정
 
 -일반노트 오브젝트 재활용
@@ -76,8 +75,3 @@ Prefab
 Object
 Value(카테고리)
 Value
-
-
-Data 끝
-Manager 끝
-Prefab 끝
