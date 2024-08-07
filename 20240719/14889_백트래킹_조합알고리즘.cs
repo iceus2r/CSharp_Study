@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 StreamReader sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
