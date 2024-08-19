@@ -28,6 +28,11 @@ Dialog 56px 한줄에 23자(한글) 가능
 -Bad시 노트 비활성화
 
 -(문서참고)일반노트 오브젝트 재활용
+NotePool을 Queue로 구현?
+처음에 라인별로 20개 만들고 Queue에 넣기, 모두 비활성화
+라인별 첫 20개 생성
+하나 쓸 때마다 비활성화
+바로 다음 위치로 노트 이동생성
 NoteDataInspector로 인스펙터에 NoteData 출력
 
 -(생각좀)음악 Addressable 개별 그룹으로 변경
